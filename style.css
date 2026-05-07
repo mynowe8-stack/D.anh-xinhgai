@@ -1,0 +1,151 @@
+/* Thiết lập font chữ và màu nền chủ đạo */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFF0F5; /* Màu hồng nhạt (Lavender Blush) */
+    color: #333; /* Màu chữ xám đen để dễ đọc */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Các tiêu đề nhấn nhá màu xanh dương nhẹ */
+h1, h2 {
+    color: #5B9EA6; /* Xanh dương ánh xám/teal nhẹ */
+    text-align: center;
+}
+
+/* Định dạng chung cho các phần (Sections) */
+section, header, footer {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+/* Phần 1: Header */
+.hero {
+    text-align: center;
+    margin-top: 40px;
+    border-bottom: 3px solid #B0E0E6; /* Viền dưới màu xanh dương nhạt (Powder Blue) */
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #666;
+}
+
+/* Các phần có nền nhấn (Phần 3 và Phần 5) */
+.accent-bg {
+    background-color: #E6F3F7; /* Nền xanh dương cực nhạt để tạo điểm nhấn */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+/* Định dạng danh sách ở Phần 3 */
+ul {
+    list-style-type: square;
+    color: #5B9EA6;
+}
+ul li {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Định dạng khung ảnh ở Phần 4 */
+.gallery {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+/* Định dạng cho hình ảnh thật */
+.photo {
+    width: 200px;
+    height: 150px;
+    object-fit: cover; /* Thuộc tính cực kỳ quan trọng giúp ảnh bị cắt tự động cho vừa khung mà không bị méo */
+    border-radius: 10px; /* Bo tròn góc ảnh */
+    border: 3px solid #B0E0E6; /* Thêm viền xanh dương nhạt cho hợp tông màu */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Thêm bóng đổ nhẹ cho ảnh nổi lên */
+    transition: transform 0.3s ease; /* Tạo độ mượt cho hiệu ứng phóng to */
+}
+
+/* Hiệu ứng khi di chuột (hover) vào ảnh */
+.photo:hover {
+    transform: scale(1.05); /* Phóng to ảnh lên 5% khi trỏ chuột vào */
+}
+
+/* Phần 5: Footer */
+.footer {
+    text-align: center;
+    font-style: italic;
+    border-top: 3px solid #B0E0E6;
+}
+/* Định dạng cho nút chuyển trang */
+.btn-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 25px;
+    background-color: #5B9EA6; /* Màu xanh dương chủ đạo */
+    color: white;
+    text-decoration: none; /* Bỏ gạch chân của link */
+    border-radius: 25px; /* Bo tròn góc */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hiệu ứng khi di chuột (hover) vào nút */
+.btn-link:hover {
+    background-color: #B0E0E6; /* Đổi sang màu xanh dương nhạt */
+    color: #333;
+    transform: translateY(-2px); /* Nút hơi nhô lên nhẹ */
+}
+/* Container bao ngoài để định vị hoa trang trí */
+.link-wrapper {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0;
+    /* Đặt hình ảnh hoa hồng làm nền cho khu vực này */
+    background-image: url('roses-decor.png');
+    background-size: contain; /* Hoặc 'cover' tùy thuộc vào kích thước ảnh của bạn */
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative; /* Cần thiết nếu muốn dùng :before/:after về sau */
+}
+/* Định dạng riêng cho nút link trong phần này */
+.btn-link.floral-link {
+    display: inline-block;
+    padding: 12px 30px;
+    /* Màu xanh nhạt (ví dụ: Powder Blue) */
+    background-color: #B0E0E6; 
+    /* Màu chữ (ví dụ: trắng hoặc xanh đậm hơn) */
+    color: white; 
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 1.1em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Tạo hiệu ứng nổi */
+    transition: all 0.3s ease;
+    /* Đảm bảo nút nằm trên hình nền hoa */
+    position: relative; 
+    z-index: 1; 
+}
+
+/* Hiệu ứng khi di chuột vào nút */
+.btn-link.floral-link:hover {
+    background-color: #A0D0D6; /* Màu xanh đậm hơn một chút khi hover */
+    transform: translateY(-3px); /* Nhích nhẹ lên trên */
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+/* Tùy chỉnh thêm cho các icon (tùy chọn) */
+.hobbies-content p {
+    font-size: 1.1em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+.icon {
+    font-size: 1.3em;
+}
